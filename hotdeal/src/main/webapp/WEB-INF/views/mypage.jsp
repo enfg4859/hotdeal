@@ -48,10 +48,7 @@
 		<div class="row">
 			<div>
 				<nav class="nav nav-pills flex-column flex-sm-row col-8 m-auto">
-					<a class="flex-sm-fill text-sm-center nav-link" href="#">전체</a>
-					<a class="flex-sm-fill text-sm-center nav-link" href="#">카테고리</a> 
-					<a class="flex-sm-fill text-sm-center nav-link" href="#">찜목록</a> 
-					<a class="flex-sm-fill text-sm-center nav-link" href="#">D</a>
+					<a class="flex-sm-fill text-sm-center nav-link" href="#">A</a> <a class="flex-sm-fill text-sm-center nav-link" href="#">B</a> <a class="flex-sm-fill text-sm-center nav-link" href="#">C</a> <a class="flex-sm-fill text-sm-center nav-link" href="#">D</a>
 				</nav>
 			</div>
 		</div>

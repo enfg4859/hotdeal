@@ -11,31 +11,40 @@ import com.springmvc.repository.UserRepository;
 @Service
 public class UserServiceImpl implements UserService {
 
-    @Autowired
-    private UserRepository userRepository;
+	@Autowired
+	private UserRepository userRepository;
 
-    @Override
-    public List<User> getAllUsers() {
-    	return null;
-    }
+	@Override
+	public List<User> getAllUsers() {
+		return null;
+	}
 
-    @Override
-    public User getUserById(Long id) {
-    	return null;
-    }
+	@Override
+	public User getUserById(Long id) {
+		return null;
+	}
 
-    @Override
-    public User createUser(User user) {
-    	userRepository.createUser(user);
-    	return null;
-    }
+	@Override
+	public boolean loginUser(String user_id, String password) {
+		User user = userRepository.loginUser(user_id, password);
+		if (user != null && user.getPassword().equals(password)) {
+			return true; // 로그인 성공
+		}
+		return false; // 로그인 실패
+	}
 
-    @Override
-    public User updateUser(Long id, User user) {
-    	return null;
-    }
+	@Override
+	public User createUser(User user) {
+		userRepository.createUser(user);
+		return user;
+	}
 
-    @Override
-    public void deleteUser(Long id) {
-    }
+	@Override
+	public User updateUser(Long id, User user) {
+		return null;
+	}
+
+	@Override
+	public void deleteUser(Long id) {
+	}
 }

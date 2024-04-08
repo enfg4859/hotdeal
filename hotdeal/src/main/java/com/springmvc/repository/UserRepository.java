@@ -9,9 +9,15 @@ import com.springmvc.domain.User;
 @Repository
 public interface UserRepository {
 
-    List<User> getAllUsers();
-    User getUserById(Long id);
-    User createUser(User user);
-    User updateUser(Long id, User user);
-    void deleteUser(Long id);
+	List<User> getAllUsers();
+
+	User getUserById(Long id);
+
+	User loginUser(String user_id, String password);
+
+	User createUser(User user);
+
+	User updateUser(Long id, User user);
+
+	void deleteUser(Long id);
 }
