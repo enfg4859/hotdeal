@@ -17,6 +17,8 @@ CREATE TABLE Item (
   title VARCHAR(20),
   content text,
   price INT,
+  category varchar(10),
+  img varchar(100),
   item_created_at DATETIME,
   FOREIGN KEY (user_id) REFERENCES user(id)
 );
@@ -58,6 +60,7 @@ insert into user values(null, '1', '2', '3', '4', null);
 insert into user values(null, '2', '3', '4', '5', null);
 insert into user values(null, '3', '4', '5', '6', null);
 select * from user;
+select * from item;
 
 
 

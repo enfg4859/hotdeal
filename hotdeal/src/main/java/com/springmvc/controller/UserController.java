@@ -34,19 +34,19 @@ public class UserController {
 	}
 
 	// 로그인
-	@GetMapping("/login")
-	@ResponseBody
-	public String loginUser(@RequestParam("user_id") String user_id, @RequestParam("password") String password,
-			HttpServletRequest request) {
-		boolean loginSuccess = userService.loginUser(user_id, password);
-		if (loginSuccess) {
-			HttpSession session = request.getSession();
-			session.setAttribute("user", user_id);
-			return "true";
-		} else {
-			return "false";
+		@GetMapping("/login")
+		@ResponseBody
+		public String loginUser(@RequestParam("user_id") String user_id, @RequestParam("password") String password,
+				HttpServletRequest request) {
+			boolean loginSuccess = userService.loginUser(user_id, password);
+			if (loginSuccess) {
+				HttpSession session = request.getSession();
+				session.setAttribute("user", user_id);
+				return "true";
+			} else {
+				return "false";
+			}
 		}
-	}
 
 	@GetMapping("/logout")
 	public String logout(HttpSession session) {

@@ -48,7 +48,7 @@
 		<div class="row">
 			<div>
 				<nav class="nav nav-pills flex-column flex-sm-row col-8 m-auto">
-					<a class="flex-sm-fill text-sm-center nav-link" href="#">전체</a>
+					<a class="flex-sm-fill text-sm-center nav-link" href="/hotdeal/main">전체</a> 
 					<a class="flex-sm-fill text-sm-center nav-link" href="#">카테고리</a> 
 					<a class="flex-sm-fill text-sm-center nav-link" href="#">찜목록</a> 
 					<a class="flex-sm-fill text-sm-center nav-link" href="#">D</a>
@@ -135,8 +135,17 @@
 					<h5 class="modal-title" id="itemModalLabel">상품 등록</h5>
 					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 				</div>
-				<form:form modelAttribute="item" action="./items?${_csrf.parameterName}=${_csrf.token}">
+				<form:form action="./items?${_csrf.parameterName}=${_csrf.token}" method="post" enctype="multipart/form-data">
 					<div class="modal-body">
+						<div class="mb-3">
+							<label for="category" class="form-label">카테고리</label> <select class="form-select" id="category" name="category">
+								<option value="전자/IT">전자/IT</option>
+								<option value="식품/영양">식품/영양</option>
+								<option value="뷰티/패션">뷰티/패션</option>
+								<option value="이벤트/상품권">이벤트/상품권</option>
+								<option value="기타">기타</option>
+							</select>
+						</div>
 						<div class="mb-3">
 							<label for="url" class="form-label">URL</label> <input type="text" class="form-control" id="url" name="url">
 						</div>
@@ -149,6 +158,9 @@
 						</div>
 						<div class="mb-3">
 							<label for="price" class="form-label">가격</label> <input type="number" class="form-control" id="price" name="price">
+						</div>
+						<div class="mb-3">
+							<label for="file" class="form-label">이미지 등록</label> <input type="file" class="form-control" id="file" name="file">
 						</div>
 					</div>
 					<div class="modal-footer">

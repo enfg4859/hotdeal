@@ -10,10 +10,28 @@ public class Item {
     private String content;
     private String url;
     private int price;
+    private String category;
+    private String img;
     private LocalDateTime item_created_at;
     
     public Item() {
     }
+
+	public String getCategory() {
+		return category;
+	}
+
+	public void setCategory(String category) {
+		this.category = category;
+	}
+
+	public String getImg() {
+		return img;
+	}
+
+	public void setImg(String img) {
+		this.img = img;
+	}
 
 	public String getContent() {
 		return content;

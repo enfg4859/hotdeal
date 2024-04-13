@@ -28,9 +28,9 @@ public class UserServiceImpl implements UserService {
 	public boolean loginUser(String user_id, String password) {
 		User user = userRepository.loginUser(user_id, password);
 		if (user != null && user.getPassword().equals(password)) {
-			return true; // 로그인 성공
+			return true;
 		}
-		return false; // 로그인 실패
+		return false;
 	}
 
 	@Override
